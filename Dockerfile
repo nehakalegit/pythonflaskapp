@@ -2,6 +2,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy requirements and install dependencies(-r is read dependencies from this file)
+#Copy dependencies first, install them, then copy your source code
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
