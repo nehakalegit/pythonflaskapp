@@ -1,8 +1,13 @@
-FROM python:latest
+FROM python:3.9-slim
 WORKDIR /app
+
+# Copy requirements and install dependencies
 COPY requirements.txt .
-RUN pip install flask
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy app source code
 COPY . .
+
+# Expose port and run app
 EXPOSE 5000
-CMD ["python", "app.py"]
+CMD ["python", "app.py"
