@@ -1,12 +1,8 @@
-
-    
-
-         
 version: "3.9"
 
 services:
   web:
-    image: nehakaledocker/pythonflaskapp:latest
+    image: docker.io/nehakaledocker/pythonflaskapp
     ports:
       - "5000:5000"   # Makes your app accessible on EC2 public-ip:5000
     restart: unless-stopped  # Restarts container if it crashes, but allows debugging
