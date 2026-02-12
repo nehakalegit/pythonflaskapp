@@ -6,5 +6,4 @@ services:
     ports:
       - "5000:5000"   # Makes your app accessible on EC2 public-ip:5000
     restart: unless-stopped  # Restarts container if it crashes, but allows debugging
-    tty: true                # Keeps container alive so you can exec into it
-    stdin_open: true         # Allows interactive terminal for exec
+   
